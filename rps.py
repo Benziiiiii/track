@@ -7,7 +7,7 @@ import random
 while True:
     user_action = input("Enter throw (rock, paper, scissors) or 'quit' to exit: ").lower()
     
-    if user_action == "quit":
+    if user_action == ["quit", "q"]:
         print("Thanks for playing!")
         break
     
@@ -39,5 +39,7 @@ while True:
         else:
             print("Rock smashes scissors! You lose.")
 
-    print()  # Adds a blank line for readability
-
+    play_again = input("Play again? (yes/no): ").lower()
+	if play_again not in ["yes", "y"]:
+		print ("Thanks for playing!.")
+		break
